@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "639041912431",
+    "project_id": "trabalhofinal2",
+    "storage_bucket": "trabalhofinal2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:639041912431:android:21763230a3d7426fa4d79a",
+        "android_client_info": {
+          "package_name": "com.example.trabalhofinalandroid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "639041912431-c26sbpef44k4hnr1rhjdjh9kr1kq9dii.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWVHR27Df_lyOXkd9uglfj7LiOqkwp8gc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "639041912431-c26sbpef44k4hnr1rhjdjh9kr1kq9dii.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
