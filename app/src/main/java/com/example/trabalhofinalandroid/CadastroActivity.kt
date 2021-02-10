@@ -1,5 +1,6 @@
 package com.example.trabalhofinalandroid
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -28,6 +29,9 @@ class CadastroActivity : AppCompatActivity() {
                     // Sign in success, update UI with the signed-in user's information
                     Toast.makeText(baseContext, "Authentication CERTO.",
                         Toast.LENGTH_SHORT).show()
+                    val navegaParaLogin = Intent(this, MainActivity::class.java);
+                    startActivity(navegaParaLogin);
+
                 } else {
                     // If sign in fails, display a message to the user.
 
