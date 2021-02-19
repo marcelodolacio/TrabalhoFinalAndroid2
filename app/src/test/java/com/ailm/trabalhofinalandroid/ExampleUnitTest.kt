@@ -1,4 +1,4 @@
-package com.example.trabalhofinalandroid
+package com.ailm.trabalhofinalandroid
 
 import org.junit.Test
 

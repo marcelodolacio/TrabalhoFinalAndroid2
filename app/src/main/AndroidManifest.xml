@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.trabalhofinalandroid">
+    package="com.ailm.trabalhofinalandroid">
 
     <application
         android:allowBackup="true"
@@ -9,10 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TrabalhoFinalAndroid">
-        <activity android:name=".CadastroActivity"></activity>
-        <activity android:name=".EsqueciSenhaActivity" />
-        <activity android:name=".HomeActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name="com.ailm.trabalhofinalandroid.CadastroActivity"></activity>
+        <activity android:name="com.ailm.trabalhofinalandroid.EsqueciSenhaActivity" />
+        <activity android:name="com.ailm.trabalhofinalandroid.HomeActivity" />
+        <activity android:name="com.ailm.trabalhofinalandroid.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
