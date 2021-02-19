@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">TrabalhoFinalAndroid</string>
+
+    <!--    Validacao campos  -->
+    <string name="email_required">E-mail obrigatório!</string>
+    <string name="password_required">Senha obrigatória!</string>
+    <string name="password_6_char">Senha maior que 6 cacacteres!</string>
+    <string name="login_error">Erro no login, Verifique os dados!</string>
+
+    <!--    textos da tela de cadastro (CadastroActivity)-->
+    <string name="ti_emailCadastro">E-mail obrigatório!</string>
+    <string name="ti_senhaCadastro">Senha obrigatória!</string>
+    <string name="ti_repeteSenhaCadastro">Confirmação de senha obrigatória!</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

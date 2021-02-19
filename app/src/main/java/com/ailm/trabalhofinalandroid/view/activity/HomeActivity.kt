@@ -1,7 +1,8 @@
-package com.ailm.trabalhofinalandroid
+package com.ailm.trabalhofinalandroid.view.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.ailm.trabalhofinalandroid.R
 
 class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
