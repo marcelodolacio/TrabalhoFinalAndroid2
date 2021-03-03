@@ -2,7 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ailm.trabalhofinalandroid">
 
-    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+
 
     <application
         android:allowBackup="true"
@@ -11,10 +12,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TrabalhoFinalAndroid">
-        <activity android:name="com.ailm.trabalhofinalandroid.view.activity.CadastroActivity"></activity>
-        <activity android:name="com.ailm.trabalhofinalandroid.view.activity.EsqueciSenhaActivity" />
-        <activity android:name="com.ailm.trabalhofinalandroid.view.activity.HomeActivity" />
-        <activity android:name="com.ailm.trabalhofinalandroid.view.activity.MainActivity">
+        <activity android:name=".view.activity.ChatBotActivity"></activity>
+        <activity android:name=".view.activity.CadastroActivity" />
+        <activity android:name=".view.activity.EsqueciSenhaActivity" />
+        <activity android:name=".view.activity.HomeActivity" />
+        <activity android:name=".view.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

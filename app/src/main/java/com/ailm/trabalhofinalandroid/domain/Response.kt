@@ -1,4 +1,5 @@
 package com.ailm.trabalhofinalandroid.domain
 
-class Response {
-}
+data class Response (
+    val queryResult: QueryResult
+)

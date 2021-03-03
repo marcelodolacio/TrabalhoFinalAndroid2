@@ -1,4 +1,5 @@
 package com.ailm.trabalhofinalandroid.domain
 
-class QueryResult {
-}
+data class QueryResult (
+    val fulfillmentText: String
+)

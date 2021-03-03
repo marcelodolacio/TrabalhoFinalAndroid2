@@ -29,6 +29,9 @@ class MainActivity : AppCompatActivity() {
         tv_esqueciSenha.setOnClickListener {
             esqueciSenha();
         }
+        bt_ChatBot.setOnClickListener {
+            acessoChatBot();
+        }
 
         viewmodelLogin = LoginViewModel(application)
         viewmodelLogin.resultadoParaTela.observe(this) { resultado ->
@@ -45,7 +48,7 @@ class MainActivity : AppCompatActivity() {
         viewmodelLogin.login(data)
     }
 
-    fun processarResultLogin(res: LoginResult){
+    private fun processarResultLogin(res: LoginResult){
         //mensagem de erro para usuario atraves de Toast
         if(res.error != null) {
             Toast.makeText(this, res.error, Toast.LENGTH_LONG).show()
@@ -58,13 +61,17 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    fun esqueciSenha(){
+    private fun esqueciSenha(){
         val navegaParaEsqueciSenha = Intent(this, EsqueciSenhaActivity::class.java);
         startActivity(navegaParaEsqueciSenha);
     }
 
-    fun registro(){
+    private fun registro(){
         val navegaParaTelaCadastro = Intent(this, CadastroActivity::class.java);
         startActivity(navegaParaTelaCadastro);
+    }
+    private fun acessoChatBot(){
+        val navegaParaTelaChatBot = Intent(this, ChatBotActivity::class.java);
+        startActivity(navegaParaTelaChatBot);
     }
 }
