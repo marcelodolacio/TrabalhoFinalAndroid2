@@ -1,5 +1,6 @@
 package com.ailm.trabalhofinalandroid.interactor
 
+import android.util.Log
 import com.ailm.trabalhofinalandroid.domain.PontosTuristicos
 import com.ailm.trabalhofinalandroid.repository.ApiRepository
 

@@ -7,10 +7,20 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.room.*
 import com.ailm.trabalhofinalandroid.databinding.FragmentListaBinding
 import com.ailm.trabalhofinalandroid.domain.PontosTuristicos
 import com.ailm.trabalhofinalandroid.view.adapter.AdaptadorPontosTuristicos
 import com.ailm.trabalhofinalandroid.viewmodel.ApiViewModel
+import java.math.BigDecimal
+import androidx.appcompat.app.AppCompatActivity
+import android.util.Log
+import android.widget.Toast
+import androidx.room.*
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 class ListaFragment : Fragment() {
 
@@ -38,6 +48,7 @@ class ListaFragment : Fragment() {
     }
 
     fun chamarAPI(){
+
         viewModel.chamarAPI()
     }
 }

@@ -3,20 +3,41 @@ package com.ailm.trabalhofinalandroid.view.activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
+import androidx.room.*
 import com.ailm.trabalhofinalandroid.R
 import com.ailm.trabalhofinalandroid.domain.LoginData
 import com.ailm.trabalhofinalandroid.domain.LoginResult
 import com.ailm.trabalhofinalandroid.viewmodel.LoginViewModel
-import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
     lateinit var viewmodelLogin: LoginViewModel
 
+    /* variaveis necessarias para BD */
+    private lateinit var database: AppDataBase
+    private lateinit var dao: PontosFavoritosDao
+    private var favoritos: PontosFavoritosBD = PontosFavoritosBD()
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        /* BD no celular */
+        database = Room
+            .databaseBuilder(applicationContext, AppDataBase::class.java, "meubanco")
+            .build()
+
+        dao = database.getFavoritosDao()
+        insertPontosFavoritos()
+        Log.d("LOG", " passou insertPontosFavoritos()")
+
+        searchPontosFavoritos()
+        Log.d("LOG", " passou searchPontosFavoritos()")
 
         bt_Login.setOnClickListener {
             login();
@@ -36,6 +57,30 @@ class MainActivity : AppCompatActivity() {
         viewmodelLogin = LoginViewModel(application)
         viewmodelLogin.resultadoParaTela.observe(this) { resultado ->
             processarResultLogin(resultado)
+        }
+    }
+
+
+//    @Query("select count(*) from PontosTuristicosBD where id > 0 ")
+//    suspend fun getPontosTuristicos(): PontosTuristicosBD
+
+    private fun searchPontosFavoritos() {
+        GlobalScope.launch{
+            favoritos = dao.getPontosFavoritos(1)
+
+            Log.d("LOG", " id: ${favoritos.id}")
+            Log.d("LOG", " name: ${favoritos.nome}")
+        }
+    }
+
+
+    private fun insertPontosFavoritos(){
+        GlobalScope.launch {
+            val p = PontosFavoritosBD(
+//                id = 1 ,
+                nome = "Torre de TV"
+            )
+            dao.insertPontosFavoritos(p)
         }
     }
 
@@ -75,3 +120,34 @@ class MainActivity : AppCompatActivity() {
         startActivity(navegaParaTelaChatBot);
     }
 }
+
+/*
+* entidade PontosTuristicos do banco de dados
+* */
+@Entity
+data class PontosFavoritosBD(
+    @PrimaryKey(autoGenerate = true)
+    val id: Int? = null,
+    val nome: String? = null
+)
+
+/*
+* Data Access Object (DAO) de PontosTuristicos
+* */
+@Dao
+interface PontosFavoritosDao {
+    @Query("select * from PontosFavoritosBD where id = :id ")
+    suspend fun getPontosFavoritos(id: Int): PontosFavoritosBD
+
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    suspend fun insertPontosFavoritos (p: PontosFavoritosBD)
+}
+
+/*
+*  Bando de dados do APP
+* */
+@Database(entities = [PontosFavoritosBD::class], version = 1)
+abstract class AppDataBase: RoomDatabase(){
+    abstract fun getFavoritosDao(): PontosFavoritosDao
+}
+

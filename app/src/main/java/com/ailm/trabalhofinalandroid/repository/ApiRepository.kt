@@ -1,11 +1,14 @@
 package com.ailm.trabalhofinalandroid.repository
 
+import android.util.Log
 import com.ailm.trabalhofinalandroid.domain.PontosTuristicos
 import com.ailm.trabalhofinalandroid.repository.dto.PontosTuristicosDTO
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Headers
+import com.ailm.trabalhofinalandroid.view.activity.MainActivity
+
 
 interface PontosTuristicosApi {
     @GET("pontos-turisticos")
@@ -27,6 +30,7 @@ class ApiRepository {
     suspend fun chamarAPI(): List<PontosTuristicos>{
         val service = connector.create(PontosTuristicosApi::class.java)
         val listaPontosTuristicos = service.recuperarPontosTuristicos()
+        Log.d("LOG", " ApiRepository - listaPontosTuristicos: ${listaPontosTuristicos[1]}")
 
         return listaPontosTuristicos.map { dto ->
             PontosTuristicos(

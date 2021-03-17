@@ -69,6 +69,12 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth:20.0.2'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
+    /* biblioteca facilita utilizar Banco de Dados do celular */
+    /** Android Room **/
+    implementation 'androidx.room:room-runtime:2.2.6'  /* framework principal para utilizar o room */
+    implementation 'androidx.room:room-ktx:2.2.6'   /* possibilita trabalhar c/ coroutines em background */
+    kapt 'androidx.room:room-compiler:2.2.6'  /* auxiliar na geração de codigo automaticamente */
+
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
