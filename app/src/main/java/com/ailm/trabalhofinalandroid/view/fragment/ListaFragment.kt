@@ -39,6 +39,7 @@ class ListaFragment : Fragment() {
             mostrarResultadoAPI(lista)
         }
         binding.rvPontosTuristicos.layoutManager = LinearLayoutManager(context)
+
         return binding.root
     }
 
@@ -48,7 +49,6 @@ class ListaFragment : Fragment() {
     }
 
     fun chamarAPI(){
-
         viewModel.chamarAPI()
     }
 }

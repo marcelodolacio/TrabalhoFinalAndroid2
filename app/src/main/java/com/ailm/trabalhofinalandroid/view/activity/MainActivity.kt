@@ -18,16 +18,15 @@ class MainActivity : AppCompatActivity() {
     lateinit var viewmodelLogin: LoginViewModel
 
     /* variaveis necessarias para BD */
-    private lateinit var database: AppDataBase
-    private lateinit var dao: PontosFavoritosDao
-    private var favoritos: PontosFavoritosBD = PontosFavoritosBD()
-
+    //private lateinit var database: AppDataBase
+    //private lateinit var dao: PontosFavoritosDao
+    //private var favoritos: PontosFavoritosBD = PontosFavoritosBD()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        /* BD no celular */
+        /* BD no celular
         database = Room
             .databaseBuilder(applicationContext, AppDataBase::class.java, "meubanco")
             .build()
@@ -38,6 +37,7 @@ class MainActivity : AppCompatActivity() {
 
         searchPontosFavoritos()
         Log.d("LOG", " passou searchPontosFavoritos()")
+         */
 
         bt_Login.setOnClickListener {
             login();
@@ -64,6 +64,7 @@ class MainActivity : AppCompatActivity() {
 //    @Query("select count(*) from PontosTuristicosBD where id > 0 ")
 //    suspend fun getPontosTuristicos(): PontosTuristicosBD
 
+    /*
     private fun searchPontosFavoritos() {
         GlobalScope.launch{
             favoritos = dao.getPontosFavoritos(1)
@@ -83,6 +84,7 @@ class MainActivity : AppCompatActivity() {
             dao.insertPontosFavoritos(p)
         }
     }
+    */
 
     fun login(){
 

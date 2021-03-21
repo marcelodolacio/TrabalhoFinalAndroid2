@@ -1,5 +1,6 @@
 package com.ailm.trabalhofinalandroid.domain
 
+import java.io.Serializable
 import java.math.BigDecimal
 
 data class PontosTuristicos (
@@ -9,4 +10,4 @@ data class PontosTuristicos (
     val lat: BigDecimal,
     val long: BigDecimal,
     val image: String
-)
+) : Serializable
