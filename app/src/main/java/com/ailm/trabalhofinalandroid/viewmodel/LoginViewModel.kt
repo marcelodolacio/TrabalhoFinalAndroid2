@@ -1,6 +1,7 @@
 package com.ailm.trabalhofinalandroid.viewmodel
 
 import android.app.Application
+import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import com.ailm.trabalhofinalandroid.R
@@ -20,6 +21,8 @@ class LoginViewModel (val app: Application) :  AndroidViewModel(app), CoroutineS
     val resultadoParaTela = MutableLiveData<LoginResult>()
     fun login(data: LoginData) {
         //função launch para executar co rroutine sem necessidade de passar suspend para Login
+        Log.d("LOG", " LoginViewModel - login()")
+
         launch {
             val resultado = interactor.login(data)
             if (resultado.error != null){

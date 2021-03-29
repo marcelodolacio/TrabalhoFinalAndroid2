@@ -43,14 +43,14 @@
             app:layout_constraintTop_toTopOf="@+id/ivAvatar"
             app:layout_constraintVertical_bias="0" />
 
-        <ImageView
-            android:id="@+id/img_star"
-            android:src="@drawable/ic_baseline_star_border_24"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_marginStart="6dp"
-            app:layout_constraintStart_toEndOf="@id/tvNome"
-            app:layout_constraintTop_toTopOf="@+id/ivAvatar" />
+<!--        <ImageView-->
+<!--            android:id="@+id/img_star"-->
+<!--            android:src="@drawable/ic_baseline_star_border_24"-->
+<!--            android:layout_width="24dp"-->
+<!--            android:layout_height="24dp"-->
+<!--            android:layout_marginStart="6dp"-->
+<!--            app:layout_constraintStart_toEndOf="@id/tvNome"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/ivAvatar" />-->
 
 
         <TextView

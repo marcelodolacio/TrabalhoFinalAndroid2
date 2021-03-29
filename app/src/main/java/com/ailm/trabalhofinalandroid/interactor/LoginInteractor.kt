@@ -1,5 +1,6 @@
 package com.ailm.trabalhofinalandroid.interactor
 
+import android.util.Log
 import com.ailm.trabalhofinalandroid.domain.LoginData
 import com.ailm.trabalhofinalandroid.domain.LoginResult
 import com.ailm.trabalhofinalandroid.repository.LoginRepository
@@ -10,6 +11,9 @@ class LoginInteractor {
 
     // data class Login:classe de dados p/ concentrar os atributos para login e retorno de criticas/sucesso
     suspend fun login(data: LoginData): LoginResult {
+
+        Log.d("LOG", " LoginInteractor - login()")
+
 
         val resultado = LoginResult()
 

@@ -72,9 +72,7 @@ dependencies {
     /* biblioteca facilita utilizar Banco de Dados do celular */
     /** Android Room **/
     implementation 'androidx.room:room-runtime:2.2.6'  /* framework principal para utilizar o room */
-    implementation 'androidx.room:room-ktx:2.2.6'
-    implementation 'com.google.android.gms:play-services-maps:17.0.0'
-/* possibilita trabalhar c/ coroutines em background */
+    implementation 'androidx.room:room-ktx:2.2.6' /* possibilita trabalhar c/ coroutines em background */
     kapt 'androidx.room:room-compiler:2.2.6'  /* auxiliar na geração de codigo automaticamente */
 
     testImplementation 'junit:junit:4.13.2'
@@ -82,6 +80,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
     /* biblioteca mapas*/
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
 
 }
 //apply plugin: 'com.android.application'

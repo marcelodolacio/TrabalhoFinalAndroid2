@@ -19,12 +19,14 @@ class ApiViewModel(val app: Application) : AndroidViewModel(app), CoroutineScope
     val resultadoTela = MutableLiveData<List<PontosTuristicos>>()
 
     fun chamarAPI(){
+        Log.d("LOG", " ApiViewModel - chamarAPI()")
+
         launch {
             val listaPontosTuristicos =  interactor.chamarAPI()
             resultadoTela.value = listaPontosTuristicos
 
             Log.d("LOG", " ApiViewModel - listaPontosTuristicos: " +
-                    "${listaPontosTuristicos[0].nome}")
+                    "$listaPontosTuristicos")
 
         }
     }

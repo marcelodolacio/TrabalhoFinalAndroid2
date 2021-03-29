@@ -1,5 +1,6 @@
 package com.ailm.trabalhofinalandroid.repository
 
+import android.util.Log
 import com.ailm.trabalhofinalandroid.domain.LoginData
 import com.ailm.trabalhofinalandroid.domain.LoginResult
 import com.google.firebase.auth.FirebaseAuth
@@ -8,6 +9,8 @@ import kotlin.coroutines.suspendCoroutine
 
 class LoginRepository {
     suspend fun login(data: LoginData): LoginResult {
+        Log.d("LOG", " LoginRepository - login()")
+
         //retorno de "promisse"
         return suspendCoroutine { resultadoPromisse ->
             //LOGIN COM O FIREBASE

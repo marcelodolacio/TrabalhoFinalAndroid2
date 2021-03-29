@@ -3,6 +3,7 @@ package com.ailm.trabalhofinalandroid.view.adapter
 import android.content.Context
 import android.content.Intent
 import android.content.IntentSender
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,6 +15,7 @@ import com.ailm.trabalhofinalandroid.domain.PontosTuristicos
 import com.ailm.trabalhofinalandroid.view.activity.HomeActivity
 import com.ailm.trabalhofinalandroid.view.activity.MapsActivity
 import kotlinx.android.synthetic.main.item_ponto_turistico.view.*
+import com.ailm.trabalhofinalandroid.view.fragment.ListaFragment
 
 class AdaptadorPontosTuristicos(
     val lista: List<PontosTuristicos>
@@ -27,6 +29,7 @@ class AdaptadorPontosTuristicos(
         var guardador = GuardadorDeDadosPontosTuristicos(instanciaDoXML)
 
         guardador.itemView.setOnClickListener {
+            Log.d("LOG", " AdaptadorPontosTuristicos - onCreateViewHolder()")
             val ponto = guardador.binding.ponto
             System.out.println(ponto)
             val navegaParaTelaMapa = Intent(parent.context, MapsActivity::class.java)
@@ -47,6 +50,8 @@ class AdaptadorPontosTuristicos(
     }
 
     override fun getItemCount(): Int {
+        Log.d("LOG", " AdaptadorPontosTuristicos - getItemCount - $lista")
+
         return lista.size
     }
 

@@ -9,6 +9,7 @@ class ApiInteractor {
     private val repo = ApiRepository()
 
     suspend fun chamarAPI(): List<PontosTuristicos>{
+        Log.d("LOG", " ApiInteractor - chamarAPI()")
         return repo.chamarAPI()
     }
 }

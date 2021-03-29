@@ -23,4 +23,9 @@
     <string name="pergunta">Pergunta...</string>
     <string name="title_activity_maps">Map</string>
 
+    <!-- texto para banco de dados -->
+    <string name="insert_banco_dados_sucesso">Sucesso ao inserir Banco de Dados</string>
+    <string name="erro_inserir_banco_dados">Erro ao inserir no Banco de Dados</string>
+    <string name="erro_deleteall_banco_dados">Erro ao inserir no Banco de Dados</string>
+
 </resources>

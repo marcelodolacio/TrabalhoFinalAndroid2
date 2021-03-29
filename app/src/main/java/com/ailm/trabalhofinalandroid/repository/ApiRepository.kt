@@ -30,7 +30,7 @@ class ApiRepository {
     suspend fun chamarAPI(): List<PontosTuristicos>{
         val service = connector.create(PontosTuristicosApi::class.java)
         val listaPontosTuristicos = service.recuperarPontosTuristicos()
-        Log.d("LOG", " ApiRepository - listaPontosTuristicos: ${listaPontosTuristicos[1]}")
+        Log.d("LOG", " ApiRepository - chamarAPI - listaPontosTuristicos: $listaPontosTuristicos")
 
         return listaPontosTuristicos.map { dto ->
             PontosTuristicos(
