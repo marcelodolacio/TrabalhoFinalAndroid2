@@ -5,14 +5,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
-import androidx.room.*
 import com.ailm.trabalhofinalandroid.R
 import com.ailm.trabalhofinalandroid.domain.LoginData
 import com.ailm.trabalhofinalandroid.domain.LoginResult
 import com.ailm.trabalhofinalandroid.viewmodel.LoginViewModel
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
+
 
 class MainActivity : AppCompatActivity() {
     lateinit var viewmodelLogin: LoginViewModel

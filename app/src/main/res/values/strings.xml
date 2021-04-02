@@ -22,6 +22,7 @@
     <string name="resposta">Resposta:</string>
     <string name="pergunta">Pergunta...</string>
     <string name="title_activity_maps">Map</string>
+    <string name="title_activity_chatbot">ChatBot</string>
 
     <!-- texto para banco de dados -->
     <string name="insert_banco_dados_sucesso">Sucesso ao inserir Banco de Dados</string>

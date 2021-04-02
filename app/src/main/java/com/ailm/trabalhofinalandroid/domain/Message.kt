@@ -1,4 +1,4 @@
-package com.ailm.trabalhofinalandroid.di
+package com.ailm.trabalhofinalandroid.domain
 
 
 
