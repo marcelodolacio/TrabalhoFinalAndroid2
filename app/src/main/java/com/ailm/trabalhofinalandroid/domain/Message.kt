@@ -1,4 +1,8 @@
-package com.ailm.trabalhofinalandroid.domain
+package com.ailm.trabalhofinalandroid.di
+
+
+
+
 
 data class  Message(
     val text: String,
